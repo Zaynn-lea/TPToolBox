@@ -1,12 +1,11 @@
 
-#include <stdio.h>
-#include <string.h>
+#include "PrettyCMD.h"
 
 
 void WhiteLinePrint(int iNbrOfLines)
 {
     int i;
-    for (i = 0; i < iNbrOfLines; i++)
+    for (i = 0; i < iNbrOfLines; ++i)
         printf("\n");
 }
 
@@ -14,15 +13,15 @@ void WhiteLinePrint(int iNbrOfLines)
 void LinePrint(int iLength, char c)
 {
     int i;
-    for (i = 0; i < iLength; i++)
-        printf(&c);
+    for (i = 0; i < iLength; ++i)
+        printf("%c", c);
 }
 
 
-void BoxPrint(char str[])
+void BoxPrint(char *str)
 {
-    int i;
-    int iStrLength = sizeof(str) / sizeof(char);
+    size_t iStrLength = strlen(str);
+    printf("%d\n", iStrLength);
 
     // Displaying the Box :
     printf("+");
