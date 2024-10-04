@@ -59,7 +59,7 @@ void LinePrint(int iLength, char c)
 }
 
 
-void BoxPrint(char *str)
+void BoxPrint(char * str)
 {
     /*
     Display a boxed text in the command line as follows :
