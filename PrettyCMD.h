@@ -5,6 +5,7 @@
 
 
 #include <assert.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -32,12 +33,17 @@ void BoxPrint(char str[]);
 +--------------------+
 */
 
-void PrintArraydChar  (char   * cArray, int iLength);
+void PrintArrayChar  (char   * cArray, int iLength);
 
-void PrintArraydInt   (int    * dArray, int iLength);
+void PrintArrayInt   (int    * dArray, int iLength);
 
-void PrintArraydFLoat (float  * dArray, int iLength);
+void PrintArrayFLoat (float  * dArray, int iLength);
 
-void PrintArraydDouble(double * dArray, int iLength);
+void PrintArrayDouble(double * dArray, int iLength);
+
+void PrintArrayBool  (bool   * dArray, int iLength);
+
+void PrintArrayString(char  ** dArray, int iLength);
+
 
 #endif

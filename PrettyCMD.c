@@ -22,6 +22,7 @@ the :
 ++----------------++
 */
 
+
 void WhiteLinePrint(int iNbrOfLines)
 {
     /*
@@ -97,6 +98,7 @@ void BoxPrint(char *str)
 |  Array Displaying  |
 +--------------------+
 */
+
 
 void PrintArrayChar(char * cArray, int iLength)
 {
@@ -179,7 +181,7 @@ void PrintArrayFloat(float * fArray, int iLength)
 }
 
 
-void PrintArraydDouble(double * dArray, int iLength)
+void PrintArrayDouble(double * dArray, int iLength)
 {
     /*
     Display the array of iLength doubles in the command line as follow :
@@ -204,3 +206,63 @@ void PrintArraydDouble(double * dArray, int iLength)
     
     printf("%lf ]\n", dArray[i_max]);
 }
+
+
+void PrintArrayBool(bool * bArray, int iLength)
+{
+    /*
+    Display the array of iLength bools in the command line as follow :
+    
+    [ bArray[0] bArray[1] ... bArray[iLength - 1] ]
+
+    the elements are either true or false separated by spaces
+
+    bArray is a pointer to bool (stdbool) (an array of bools)
+    iLength is a positive integer
+    */
+
+    assert( iLength >= 0 );
+
+    int i;
+
+    printf("[ ");
+
+    for (i = 0; i < iLength; ++i)
+    {
+        if (bArray[i])
+            printf("true ");
+
+        else
+            printf("false ");
+    }
+        
+    printf("]\n");
+}
+
+
+void PrintArrayString(char ** sArray, int iLength)
+{
+    /*
+    Display the array of iLength strings in the command line as follow :
+    
+    [ sArray[0] sArray[1] ... sArray[iLength - 1] ]
+
+    the elements are separated by tabulations
+
+    sArray is a pointer to a pointer to char (an array of strings)
+    iLength is a positive integer
+    */
+
+    assert( iLength >= 0 );
+
+    int i,
+        i_max = iLength - 1;
+
+    printf("[ ");
+
+    for (i = 0; i < i_max; ++i)
+        printf("%s\t", sArray[i]);
+    
+    printf("%s ]\n", sArray[i_max]);
+}
+
