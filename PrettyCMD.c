@@ -10,11 +10,17 @@ made by :
     Gely Leandre : https://github.com/Zaynn-lea
 
 the :
-04 / 10 / 2024
+    04 / 10 / 2024
 */
 
 #include "PrettyCMD.h"
 
+
+/*
+++----------------++
+||  Pretty Print  ||
+++----------------++
+*/
 
 void WhiteLinePrint(int iNbrOfLines)
 {
@@ -25,7 +31,10 @@ void WhiteLinePrint(int iNbrOfLines)
     iNbrOfLines is a positive integer
     */
     
+    assert( iNbrOfLines >= 0 );
+
     int i;
+    
     for (i = 0; i < iNbrOfLines; ++i)
         printf("\n");
 }
@@ -40,7 +49,10 @@ void LinePrint(int iLength, char c)
     c is a single character
     */
 
+    assert( iLength >= 0 );
+
     int i;
+    
     for (i = 0; i < iLength; ++i)
         printf("%c", c);
 }
@@ -59,14 +71,23 @@ void BoxPrint(char *str)
 
     size_t iStrLength = strlen(str);
 
-    // Displaying the Box :
+    // Displaying the Box : top line :
     printf("+");
     LinePrint(iStrLength + 4, '-');
     printf("+\n");
 
+    // Middle line, with the text :
     printf("|  %s  |\n", str);
 
+    // Bottom line :
     printf("+");
     LinePrint(iStrLength + 4, '-');
     printf("+\n");
 }
+
+
+/*
+++-----------------++
+||  Usefull Print  ||
+++-----------------++
+*/
