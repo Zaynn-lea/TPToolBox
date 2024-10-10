@@ -21,6 +21,7 @@ void LinePrint(int iLength, char c);
 
 void BoxPrint(char * str);
 
+
 /*
 ++-----------------++
 ||  Usefull Print  ||
