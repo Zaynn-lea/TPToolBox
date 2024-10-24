@@ -8,7 +8,8 @@ A toolbox library for the programing classes and maybe to help debug the mini pr
 
 
 - Bool : 
-    Basic header to define a boolean type.
+
+  Basic header to define a boolean type.
 
 
 - PrettyCMD :
