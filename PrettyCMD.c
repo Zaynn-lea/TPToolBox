@@ -46,6 +46,8 @@ void LinePrint(int iLength, char c)
     /*
     Prints iLength times the character c in the command line
 
+    !!!   Doesn't end in a \n, it doesn't go to next line on its own   !!!
+
     iLength is a positive integer
     c is a single character
     */
